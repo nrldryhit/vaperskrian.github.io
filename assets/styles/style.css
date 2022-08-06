@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+head {
+    display: none;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    background-color: purple;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+
+.link-logo {
+    display: flex;
+    align-items: center;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+.logo {
+    padding: 3px;
+    width: 120px;
+    height: 120px;
+}
+
+.title {
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+ul.nav-item {
+    display: flex;
+    justify-content: end;
+    width: 68%;
+}
+
+ul li {
+    padding: 10px;
+    display: inline;
+    right: 0%;
+}
+
+h1,
+h2,
+h3 {
+    color: purple;
+}
+
+main p {
+    text-indent: 2em;
+    text-align: justify;
+}
+
+.featured-image {
+    width: 450px;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+    float: left;
+    margin: 10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: darkgray;
+}
+
+main {
+    padding: 20px;
+    overflow: auto;
+}
+
+#content {
+    float: left;
+    width: 75%;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.clear {
+    clear: left;
+}
+
+footer {
+    padding: 10px;
+    color: white;
+    background-color: purple;
+    text-align: center;
+    font-weight: bold;
+}
+
+.icon img {
+    height: 50px;
+    width: auto;
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.prev,
+.next {
+    padding: 20px;
+    color: purple;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.text {
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.numbertext {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+.formContainer {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-25 {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.col-75 {
+    margin-top: 3px;
+}
+
+input[type=text],
+input[type=number] {
+    width: 100%;
+    height: 30px;
+}
+
+input[type=submit] {
+    background-color: purple;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+}
+
+input[type=submit]:hover {
+    background-color: purple;
+}
+
+.imgBiodata {
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.biodataContainer {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.left {
+    font-weight: bold;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    ul.nav-item {
+        display: none;
+    }
+
+    .icon img {
+        float: right;
+        display: block;
+        padding: 10px;
+        position: relative;
+    }
+
+    .nav-item.responsive {
+        position: absolute;
+        display: grid;
+        text-align: right;
+        right: 5%;
+        top: 14px;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .nav-item.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .nav-item.responsive a {
+        background-color: black;
+        padding: 7px;
+        border-radius: 5px;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    .featured-image {
+        max-height: 300px;
+        object-fit: cover;
+        object-position: center;
+        float: left;
+        margin: 10px;
+    }
+
+    .prev,
+    .next,
+    .text {
+        font-size: 15px
+    }
+
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+
+    .formContainer {
+        border-radius: 10px;
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .col-25 {
+        float: left;
+        width: 25%;
+        margin-top: 5px;
+        font-weight: bold;
+    }
+
+    .col-75 {
+        float: right;
+        width: 75%;
+        margin-top: 15px;
+    }
+
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+    }
+
+    input[type=text],
+    input[type=number] {
+        width: 100%;
+        height: 30px;
+    }
+
+    input[type=submit] {
+        background-color: purple;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        float: right;
+        margin-top: 10px;
+    }
+
+    input[type=submit]:hover {
+        background-color: purple;
+    }
+
+    .col-30 {
+        float: left;
+        width: 30%;
+    }
+
+    .imgBiodata {
+        object-fit: cover;
+        float: left;
+    }
+
+    .biodataContainer {
+        border-radius: 10px;
+        padding: 10px;
+        float: right;
+        width: 70%;
+        border: 1px solid black;
+    }
+
+    .left {
+        float: left;
+        width: 25%;
+        font-weight: bold;
+        padding: 0%;
+    }
+
+    .right {
+        float: right;
+        width: 75%;
+        padding: 0%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        display: none;
+    }
+
+    .card {
+        width: 100%;
+        padding: 20px;
+        margin: 5px;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    .featured-image {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        object-position: center;
+        float: left;
+        margin: 10px;
+    }
+}
